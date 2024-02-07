@@ -23,7 +23,6 @@ class User:
         results = connectToMySQL('login_validation_schema').query_db(query, data)
         if len(results) < 1:
             return False
-        
         return cls(results[0])
     
     @classmethod
